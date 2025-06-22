@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickpay Link - Quickpay Technical Documentation</title>
+    <link rel="stylesheet" href="tech-docs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://quickpay.net/images/unzer/logo-red.png" alt="Quickpay Logo" class="logo">
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="callback.html">Callback</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Integration Methods</h3>
+                    <ul>
+                        <li><a href="quickpay-link.html" class="active">Quickpay Link</a></li>
+                        <li><a href="quickpay-form.html">Quickpay Form</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="subscriptions.html">Subscriptions</a></li>
+                        <li><a href="saved-cards.html">Saved Cards</a></li>
+                        <li><a href="payouts.html">Payouts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="opensource.html">Opensource</a></li>
+                        <li><a href="quickpay-projects.html">Quickpay Projects</a></li>
+                        <li><a href="appendixes.html">Appendixes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Quickpay Link</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">Sign up</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </header>
+
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Quickpay Link is a hosted payment page solution that allows you to accept payments with minimal integration effort. It's perfect for businesses that want to get started quickly or don't need a fully customized payment experience.</p>
+
+                <h3>Features</h3>
+                <ul>
+                    <li>Hosted payment page</li>
+                    <li>Multiple payment methods</li>
+                    <li>Mobile responsive design</li>
+                    <li>Customizable branding</li>
+                    <li>Automatic 3D Secure handling</li>
+                </ul>
+
+                <h3>Integration Steps</h3>
+                <ol>
+                    <li>Create a payment in your backend</li>
+                    <li>Generate a payment link</li>
+                    <li>Redirect the customer to the payment page</li>
+                    <li>Handle the callback when payment is completed</li>
+                </ol>
+
+                <h3>Example Integration</h3>
+                <pre><code>// Create a payment
+POST /payments
+{
+    "currency": "DKK",
+    "order_id": "order_123",
+    "amount": 10000,
+    "payment_methods": ["creditcard", "mobilepay"],
+    "description": "Order #123"
+}
+
+// Response
+{
+    "id": "payment_id",
+    "link": "https://payment.quickpay.net/payment/payment_id"
+}</code></pre>
+
+                <h3>Customization Options</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Branding</td>
+                            <td>Custom colors, logo, and styling</td>
+                        </tr>
+                        <tr>
+                            <td>Language</td>
+                            <td>Multiple language support</td>
+                        </tr>
+                        <tr>
+                            <td>Payment Methods</td>
+                            <td>Enable/disable specific payment methods</td>
+                        </tr>
+                        <tr>
+                            <td>Layout</td>
+                            <td>Custom layout options</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Security Features</h3>
+                <ul>
+                    <li>SSL encryption</li>
+                    <li>PCI DSS compliance</li>
+                    <li>3D Secure support</li>
+                    <li>Fraud prevention</li>
+                </ul>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Always use HTTPS for your website</li>
+                    <li>Implement proper error handling</li>
+                    <li>Test the integration thoroughly</li>
+                    <li>Monitor payment success rates</li>
+                </ul>
+
+                <h3>Testing</h3>
+                <p>Use our test environment to verify your integration:</p>
+                <ul>
+                    <li>Test card numbers</li>
+                    <li>Test payment scenarios</li>
+                    <li>Error handling</li>
+                    <li>Callback testing</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="tech-docs.js"></script>
+</body>
+</html> 

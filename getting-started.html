@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - Quickpay Technical Documentation</title>
+    <link rel="stylesheet" href="tech-docs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .login-section {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .login-form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .btn-login {
+            background: #0066cc;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+        }
+        .btn-login:hover {
+            background: #0052a3;
+        }
+        .payment-gateway-section {
+            display: none;
+            margin-top: 2rem;
+        }
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .payment-method {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .payment-method:hover {
+            border-color: #0066cc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .payment-method img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://quickpay.net/images/unzer/logo-red.png" alt="Quickpay Logo" class="logo">
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="callback.html">Callback</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Integration Methods</h3>
+                    <ul>
+                        <li><a href="quickpay-link.html">Quickpay Link</a></li>
+                        <li><a href="quickpay-form.html">Quickpay Form</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="getting-started.html" class="active">Getting Started</a></li>
+                        <li><a href="subscriptions.html">Subscriptions</a></li>
+                        <li><a href="saved-cards.html">Saved Cards</a></li>
+                        <li><a href="payouts.html">Payouts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="opensource.html">Opensource</a></li>
+                        <li><a href="quickpay-projects.html">Quickpay Projects</a></li>
+                        <li><a href="appendixes.html">Appendixes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Getting Started</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">Sign up</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </header>
+
+            <div class="content-section">
+                <!-- Login Section -->
+                <div class="login-section">
+                    <h2>Login to Quickpay</h2>
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required placeholder="Enter your password">
+                        </div>
+                        <button type="submit" class="btn-login">Login</button>
+                    </form>
+                </div>
+
+                <!-- Payment Gateway Section (Hidden initially) -->
+                <div class="payment-gateway-section" id="paymentGatewaySection">
+                    <h2>Select Payment Method</h2>
+                    <div class="payment-methods">
+                        <div class="payment-method" onclick="selectPaymentMethod('creditcard')">
+                            <img src="https://quickpay.net/images/logos/grey/visa.png" alt="Credit Card">
+                            <h3>Credit Card</h3>
+                        </div>
+                        <div class="payment-method" onclick="selectPaymentMethod('mobilepay')">
+                            <img src="https://quickpay.net/images/logos/grey/mobilepay.png" alt="MobilePay">
+                            <h3>MobilePay</h3>
+                        </div>
+                        <div class="payment-method" onclick="selectPaymentMethod('applepay')">
+                            <img src="https://quickpay.net/images/logos/grey/applepay.png" alt="Apple Pay">
+                            <h3>Apple Pay</h3>
+                        </div>
+                        <div class="payment-method" onclick="selectPaymentMethod('googlepay')">
+                            <img src="https://quickpay.net/images/logos/grey/googlepay.png" alt="Google Pay">
+                            <h3>Google Pay</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="tech-docs.js"></script>
+    <script>
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Here you would typically make an API call to verify credentials
+            // For demo purposes, we'll just show the payment gateway section
+            document.querySelector('.login-section').style.display = 'none';
+            document.getElementById('paymentGatewaySection').style.display = 'block';
+        });
+
+        // Handle payment method selection
+        function selectPaymentMethod(method) {
+            // Here you would typically redirect to the payment processing page
+            // or show a payment form based on the selected method
+            console.log('Selected payment method:', method);
+            // For demo purposes, we'll just show an alert
+            alert(`Redirecting to ${method} payment processing...`);
+        }
+    </script>
+</body>
+</html> 

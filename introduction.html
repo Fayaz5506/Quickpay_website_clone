@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction - Quickpay Technical Documentation</title>
+    <link rel="stylesheet" href="tech-docs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://quickpay.net/images/unzer/logo-red.png" alt="Quickpay Logo" class="logo">
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="introduction.html" class="active">Introduction</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="callback.html">Callback</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Integration Methods</h3>
+                    <ul>
+                        <li><a href="quickpay-link.html">Quickpay Link</a></li>
+                        <li><a href="quickpay-form.html">Quickpay Form</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="subscriptions.html">Subscriptions</a></li>
+                        <li><a href="saved-cards.html">Saved Cards</a></li>
+                        <li><a href="payouts.html">Payouts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="opensource.html">Opensource</a></li>
+                        <li><a href="quickpay-projects.html">Quickpay Projects</a></li>
+                        <li><a href="appendixes.html">Appendixes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Introduction</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">Sign up</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </header>
+
+            <div class="content-section">
+                <p>The Quickpay API is based on the principles of Representational State Transfer (REST) allowing clients to create, view, modify and delete resources using standard HTTP request methods.</p>
+
+                <h2>Recommended reading:</h2>
+                <ul>
+                    <li><a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">HTTP</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/List_of_HTTP_headers" target="_blank">Headers</a>
+                        <ul>
+                            <li><a href="http://en.wikipedia.org/wiki/Basic_access_authentication" target="_blank">Basic access authentication</a></li>
+                            <li><a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">Status codes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a></li>
+                    <li><a href="http://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a></li>
+                </ul>
+
+                <p>The Quickpay API is purposely the service upon which everything else in Quickpay is built (we eat our own dog food).</p>
+
+                <h2>About versioning</h2>
+                <p>Over time new features will come along and others will be removed. To foresee and avoid potential compatibility issues, the API handles this by having multiple versions available at the same time. How to specify the desired version in the HTTP request is explained in detail later on.</p>
+
+                <p>There is however a limit in terms of backward compability and at any time only the two newest versions will be available. In addition a be beta/preview version might also be available. This <strong>example</strong> demonstrates the versions and their lifecycle:</p>
+
+                <ul>
+                    <li>v11b: Public beta/preview version</li>
+                    <li>v10: Latest version</li>
+                    <li>v09: Deprecated version</li>
+                </ul>
+
+                <h2>Access and Security</h2>
+                <p>Any and all communication is encrypted using a TLS.</p>
+                <p>To interact with our API you will need to create a user. With this user you can create multiple merchant accounts or be connected to existing merchant accounts.</p>
+                <p>Authentication is done by using HTTP Basic Auth, leave Username empty like this ':apikey' and you will need valid credentials from your account at Quickpay. It is possible to create a separate and restricted user account for API usage - in fact, we do not only encourage you to do so… your new merchant account automatically comes with a restricted user "Payment Window".</p>
+            </div>
+        </main>
+    </div>
+    <script src="tech-docs.js"></script>
+</body>
+</html> 

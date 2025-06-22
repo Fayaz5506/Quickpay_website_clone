@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - QuickPay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://quickpay.net/images/unzer/logo-red.png" alt="QuickPay Icon">
+      <span>QuickPay</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="developer.html">Developers</a></li>
+        <li class="dropdown">
+          <button class="dropbtn">Products ▾</button>
+          <div class="dropdown-content">
+            <a href="#">Payment Gateway</a>
+            <a href="#">Subscriptions</a>
+            <a href="#">MobilePay</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn">Integrations ▾</button>
+          <div class="dropdown-content">
+            <a href="#">CMS & Webshop</a>
+            <a href="#">Economy</a>
+            <a href="#">Hosted Payment Window</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <button class="dropbtn">Resources ▾</button>
+          <div class="dropdown-content">
+            <a href="#">Guides</a>
+            <a href="#">Support</a>
+            <a href="#">Blog</a>
+          </div>
+        </li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="#" class="btn btn-login">Log in</a>
+      <a href="signup.html" class="btn btn-signup">Sign Up</a>
+    </div>
+  </header>
+
+  <main class="pricing-page">
+    <section class="our-pricing-section">
+      <div class="pricing-header-container">
+        <h1 class="section-title">Our pricing</h1>
+        <div class="region-selector">
+          <label for="region-select">Select region</label>
+          <div class="select-wrapper">
+            <img src="https://quickpay.net/images/flags/europe.svg" alt="Europe flag">
+            <select id="region-select">
+              <option value="europe">Europe</option>
+              <option value="denmark">Denmark</option>
+              <option value="sweden">Sweden</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-cards-container">
+        <div class="pricing-card">
+          <h3>Merchant</h3>
+          <p class="price">EUR 7 / month</p>
+          <p class="transaction-fee">EUR 0,10 / transaction</p>
+          <button class="btn btn-primary">Sign up</button>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="enterprise-text">
+            If you process more than EUR 35.000 a month, you can get custom pricing. Get in touch.
+          </p>
+          <button class="btn btn-primary">Get in touch</button>
+        </div>
+      </div>
+
+      <div class="pricing-features">
+        <div class="feature-item">
+          <img src="https://quickpay.net/images/icons/play.svg" alt="No set-up fee icon">
+          <p>No set-up fee</p>
+        </div>
+        <div class="feature-item">
+          <img src="https://quickpay.net/images/icons/plane.svg" alt="No fees icon">
+          <p>No fees unless you start accepting transactions</p>
+        </div>
+        <div class="feature-item">
+          <img src="https://quickpay.net/images/icons/calendar.svg" alt="No notice period icon">
+          <p>No notice period</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickpay-merchant-account-section">
+      <h2>Quickpay merchant account</h2>
+      <div class="fee-summary">
+        <div class="fee-item">
+          <span>Monthly fee</span>
+          <span class="price-pink">EUR 7 / month</span>
+        </div>
+        <div class="fee-item">
+          <span>Gateway fee</span>
+          <span class="price-pink">EUR 0,10 / transaction</span>
+        </div>
+        <p class="description">With a Quickpay merchant account, you can process Visa and Mastercard as well as all the top Scandinavian mobile payment methods</p>
+      </div>
+
+      <div class="fees-table">
+        <div class="table-header">
+          <span></span>
+          <span></span>
+          <span>Additional gateway fee</span>
+          <span>Acquirer fee</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/visa.png" alt="Visa">
+            <span>Visa and Mastercard<br>through Quickpay</span>
+          </div>
+          <span></span>
+          <span>EUR 0,00</span>
+          <span>from 1,35% (min. EUR 0,10) + EUR 0,03</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/applepay.png" alt="Apple Pay">
+            <span>Apple Pay</span>
+          </div>
+          <span></span>
+          <span>EUR 0,00</span>
+          <span>Dependent on the card used</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/googlepay.png" alt="Google Pay">
+            <span>Google Pay</span>
+          </div>
+          <span></span>
+          <span>EUR 0,00</span>
+          <span>Dependent on the card used</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/vipps.png" alt="Vipps">
+            <span>Vipps</span>
+          </div>
+          <span></span>
+          <span>EUR 0,15</span>
+          <span>Dependent on the card used</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/white-ellipse-filled.png" alt="Swish">
+            <span>Swish</span>
+          </div>
+          <span></span>
+          <span>EUR 0,00</span>
+          <span>Dependent on agreement with Swish</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobilepay-online-section">
+      <h2>MobilePay Online</h2>
+      <div class="fee-summary">
+        <div class="fee-item">
+          <span>Additional monthly fee</span>
+          <span class="price-pink">+ EUR 0.00 / month</span>
+        </div>
+      </div>
+      <div class="fees-table">
+        <div class="table-header">
+          <span></span>
+          <span></span>
+          <span>Additional gateway fee</span>
+          <span>Acquirer fee</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/mobilepay.png" alt="MobilePay Online">
+            <span>MobilePay Online</span>
+          </div>
+          <span></span>
+          <span>EUR 0,11</span>
+          <span>Dependent on the card used</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="additional-payment-methods-section">
+      <h2>Additional payment methods</h2>
+      <div class="fee-summary">
+        <div class="fee-item">
+          <span>Additional monthly fee</span>
+          <span class="price-pink">+ EUR 4 / month</span>
+        </div>
+        <p class="description">The additional monthly fee makes it possible to accept all the following payment methods</p>
+      </div>
+      <div class="fees-table">
+        <div class="table-header">
+          <span></span>
+          <span></span>
+          <span>Additional gateway fee</span>
+          <span>Acquirer fee</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/visa-mc.png" alt="Visa">
+            <span>Visa and Mastercard<br>through external acquirers</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with acquirer</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/dankort.png" alt="Dankort">
+            <span>Dankort</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with acquirer</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/jcb-diners-amex.png" alt="JCB">
+            <span>JCB, Diners, Amex</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with acquirer</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/anyday.png" alt="Anyday">
+            <span>Anyday</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with Anyday</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/paypal.png" alt="PayPal">
+            <span>PayPal</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with PayPal</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/viabill.png" alt="ViaBill">
+            <span>ViaBill</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with ViaBill</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/klarna.png" alt="Klarna">
+            <span>Klarna</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with Klarna</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/trustly.png" alt="Trustly">
+            <span>Trustly</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with Trustly</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/ideal.png" alt="iDEAL">
+            <span>iDEAL</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with iDEAL</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/paysafecard.png" alt="Paysafecard">
+            <span>Paysafecard</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with Paysafecard</span>
+        </div>
+        <div class="table-row">
+          <div class="payment-logo-text">
+            <img src="https://quickpay.net/images/logos/no-bg/table-images/mobilepay.png" alt="MobilePay Subscriptions">
+            <span>MobilePay Subscriptions</span>
+          </div>
+          <span></span>
+          <span>EUR 0,04</span>
+          <span>Dependent on agreement with MobilePay</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="fees-overview-section">
+      <div class="fees-card-container">
+        <div class="fees-card">
+          <h3>General fees</h3>
+          <div class="fee-item-table">
+            <span>Set up fee</span><span>EUR 0,00</span>
+            <span>Branding of the payment window</span><span>EUR 3,00 / month</span>
+            <span>Additional domains</span><span>EUR 7,00 / month</span>
+          </div>
+        </div>
+        <div class="fees-card">
+          <h3>Visa and Mastercard fees</h3>
+          <div class="fee-item-table">
+            <span>Refund fee</span><span>EUR 0,25</span>
+            <span>Chargeback fee</span><span>EUR 35,00</span>
+            <span>Exchange rate</span><span>0,90 %</span>
+            <span>3-D Secure fee</span><span>EUR 0,04</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enterprise-testimonial-section">
+      <div class="testimonial-content">
+        <h3>Enterprise</h3>
+        <p>
+          If you process more than 35.000 EUR a month, you can get custom pricing. Get in touch.
+        </p>
+        <div class="loading-spinner"></div>
+      </div>
+      <div class="merchant-logos-grid">
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/undo.png" alt="UNDO: logo">
+        </div>
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/dbu.png" alt="AppMonk.dk logo">
+        </div>
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/fastspeed.png" alt="FastSpeed logo">
+        </div>
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/bedrenaetter.png" alt="bedrenaetter logo">
+        </div>
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/safeticket.png" alt="Safeticket logo">
+        </div>
+        <div class="merchant-logo-circular">
+          <img src="https://quickpay.net/images/logos/no-bg/rito.png" alt="RITO logo">
+        </div>
+      </div>
+    </section>
+    <p class="vat-exclusive">All prices exclusive of VAT</p>
+  </main>
+
+  <footer class="new-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="https://quickpay.net/images/unzer/logo-red.png" alt="QuickPay Icon">
+          <span>quickpay<br>by unzer</span>
+        </div>
+        <a href="signup.html" class="btn btn-signup">Sign up</a>
+        <div class="social-icons">
+          <img src="https://quickpay.net/svg/icons/linkedin.e370e37e07d6f8d229d9943f5a099aef7d1aeb56aba5ec7538c9884999f18be4.svg" alt="LinkedIn">
+          <img src="https://quickpay.net/svg/icons/github.8b78c43eac4bb48565630bcd1e1096688e1181c56351c7c8bd7587e8eb480928.svg" alt="github">
+        </div>
+      </div>
+      <div class="footer-section-group">
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li>Support<br>Monday - Thursday: 09:00 - 16:00<br>Friday: 09:00 - 15:30</li>
+            <li>+45 77 34 86 42</li>
+            <li><a href="mailto:support@quickpay.net">support@quickpay.net</a></li>
+            <li><a href="mailto:sales@quickpay.net">sales@quickpay.net</a></li>
+            <li><a href="mailto:accounting@quickpay.net">accounting@quickpay.net</a></li>
+            <li><a href="mailto:communications@quickpay.net">communications@quickpay.net</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#">Partner program</a></li>
+            <li><a href="pricing.html">Prices</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Quickpay</h3>
+          <ul>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Complaints</a></li>
+            <li><a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Status page</a></li>
+            <li><a href="#">Quickpay Index</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="developer.html">Developers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2023 © All rights reserved. Quickpay ®</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,185 @@
+q2<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quickpay Form - Quickpay Technical Documentation</title>
+    <link rel="stylesheet" href="tech-docs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://quickpay.net/images/unzer/logo-red.png" alt="Quickpay Logo" class="logo">
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="callback.html">Callback</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Integration Methods</h3>
+                    <ul>
+                        <li><a href="quickpay-link.html">Quickpay Link</a></li>
+                        <li><a href="quickpay-form.html" class="active">Quickpay Form</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="subscriptions.html">Subscriptions</a></li>
+                        <li><a href="saved-cards.html">Saved Cards</a></li>
+                        <li><a href="payouts.html">Payouts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="opensource.html">Opensource</a></li>
+                        <li><a href="quickpay-projects.html">Quickpay Projects</a></li>
+                        <li><a href="appendixes.html">Appendixes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Quickpay Form</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">Sign up</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </header>
+
+            <div class="content-section">
+                <h2>Overview</h2>
+                <p>Quickpay Form is a customizable payment form that you can embed directly into your website. It provides more flexibility than Quickpay Link while maintaining security and compliance.</p>
+
+                <h3>Features</h3>
+                <ul>
+                    <li>Embeddable payment form</li>
+                    <li>Full customization options</li>
+                    <li>Multiple payment methods</li>
+                    <li>Responsive design</li>
+                    <li>Built-in validation</li>
+                </ul>
+
+                <h3>Integration Steps</h3>
+                <ol>
+                    <li>Include the Quickpay Form JavaScript library</li>
+                    <li>Create a payment in your backend</li>
+                    <li>Initialize the form with your payment details</li>
+                    <li>Handle the payment response</li>
+                </ol>
+
+                <h3>Basic Implementation</h3>
+                <pre><code>&lt;!-- Include Quickpay Form library --&gt;
+&lt;script src="https://payment.quickpay.net/form/form.js"&gt;&lt;/script&gt;
+
+&lt;!-- Create a container for the form --&gt;
+&lt;div id="quickpay-form"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+// Initialize the form
+QuickpayForm.init({
+    payment_id: 'payment_id',
+    merchant_id: 'your_merchant_id',
+    amount: 10000,
+    currency: 'DKK',
+    payment_methods: ['creditcard', 'mobilepay'],
+    callback_url: 'https://your-domain.com/callback'
+});
+&lt;/script&gt;</code></pre>
+
+                <h3>Form Configuration Options</h3>
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>payment_id</td>
+                            <td>ID of the created payment</td>
+                        </tr>
+                        <tr>
+                            <td>merchant_id</td>
+                            <td>Your Quickpay merchant ID</td>
+                        </tr>
+                        <tr>
+                            <td>amount</td>
+                            <td>Payment amount in smallest currency unit</td>
+                        </tr>
+                        <tr>
+                            <td>currency</td>
+                            <td>Payment currency (e.g., DKK, EUR)</td>
+                        </tr>
+                        <tr>
+                            <td>payment_methods</td>
+                            <td>Array of enabled payment methods</td>
+                        </tr>
+                        <tr>
+                            <td>callback_url</td>
+                            <td>URL to receive payment notifications</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Styling and Customization</h3>
+                <pre><code>// Custom styling example
+QuickpayForm.init({
+    // ... other options ...
+    styling: {
+        primary_color: '#0066cc',
+        secondary_color: '#f5f5f5',
+        font_family: 'Arial, sans-serif',
+        button_radius: '4px',
+        input_radius: '4px'
+    }
+});</code></pre>
+
+                <h3>Event Handling</h3>
+                <pre><code>QuickpayForm.on('payment_success', function(response) {
+    // Handle successful payment
+    console.log('Payment successful:', response);
+});
+
+QuickpayForm.on('payment_error', function(error) {
+    // Handle payment error
+    console.error('Payment failed:', error);
+});</code></pre>
+
+                <h3>Security Considerations</h3>
+                <ul>
+                    <li>Always use HTTPS</li>
+                    <li>Validate payment data server-side</li>
+                    <li>Implement proper error handling</li>
+                    <li>Use test mode during development</li>
+                </ul>
+
+                <h3>Testing</h3>
+                <p>Use our test environment to verify your integration:</p>
+                <ul>
+                    <li>Test card numbers</li>
+                    <li>Test payment scenarios</li>
+                    <li>Error handling</li>
+                    <li>Callback testing</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="tech-docs.js"></script>
+</body>
+</html> 

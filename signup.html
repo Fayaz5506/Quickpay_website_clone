@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - QuickPay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="signup-page-container">
+    <div class="signup-sidebar">
+      <div class="signup-hand-illustration"></div>
+      <div class="signup-sidebar-content">
+        <h2>Welcome to Quickpay</h2>
+        <ul>
+          <li>Get started quickly</li>
+          <li>Join over 30.000 merchants that process payments with us</li>
+          <li>Accept a huge selection of payment methods</li>
+        </ul>
+        <div class="sidebar-payment-methods">
+          <img src="https://quickpay.net/images/logos/grey/visa.png" alt="Visa">
+          <img src="https://quickpay.net/images/logos/grey/mastercard.png" alt="Mastercard">
+          <img src="https://quickpay.net/images/logos/grey/mobilepay.png" alt="MobilePay">
+          <img src="https://quickpay.net/images/logos/grey/applepay.png" alt="Apple Pay">
+          <img src="https://quickpay.net/images/logos/grey/googlepay.png" alt="Google Pay">
+        </div>
+      </div>
+    </div>
+    <div class="signup-main-content">
+      <div class="signup-header-top">
+        Already have an account? <a href="#" class="login-link">Login</a>
+      </div>
+      <div class="signup-steps" id="signup-steps">
+        <div class="step active" data-step="1">
+          <div class="step-number"><span>1</span></div>
+          <p>Get started</p>
+        </div>
+        <div class="step" data-step="2">
+          <div class="step-number"><span>2</span></div>
+          <p>Set password</p>
+        </div>
+        <div class="step" data-step="3">
+          <div class="step-number"><span>3</span></div>
+          <p>Create account</p>
+        </div>
+        <div class="step" data-step="4">
+          <div class="step-number"><span>4</span></div>
+          <p>Process payments</p>
+        </div>
+      </div>
+      <div class="signup-form-section" id="step-1-content">
+        <h1>Get started</h1>
+        <p>Please enter your email address to start your journey withQuickpay.</p>
+        <div class="form-group">
+          <label for="email-address">Email address</label>
+          <input type="email" id="email-address" placeholder="" required>
+          <p class="error-message" id="email-error"></p>
+        </div>
+        <button class="btn btn-primary continue-btn" id="continue-btn">Continue</button>
+      </div>
+
+      <div class="signup-form-section hidden" id="step-2-content">
+        <h1>Set your password</h1>
+        <p>Create a strong password for your Quickpay account.</p>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="" required>
+          <p class="error-message" id="password-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="" required>
+          <p class="error-message" id="confirm-password-error"></p>
+        </div>
+        <button class="btn btn-primary continue-btn" id="set-password-btn">Set Password</button>
+      </div>
+
+      <div class="signup-form-section hidden" id="step-3-content">
+        <h1>Create your account</h1>
+        <p>Please provide a few more details to create your Quickpay account.</p>
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="" required>
+          <p class="error-message" id="full-name-error"></p>
+        </div>
+        <div class="form-group">
+          <label for="business-name">Business Name (Optional)</label>
+          <input type="text" id="business-name" placeholder="">
+        </div>
+        <button class="btn btn-primary continue-btn" id="create-account-btn">Create Account</button>
+      </div>
+
+      <div class="signup-form-section hidden" id="step-4-content">
+        <h1>Process payments</h1>
+        <p>Congratulations! Your Quickpay account has been created. You can now start processing payments.</p>
+        <button class="btn btn-primary continue-btn" id="go-to-dashboard-btn" onclick="window.location.href='index.html'">Go to Dashboard</button>
+      </div>
+
+      <div class="signup-footer-links">
+        <p>Need help? We are just a click away.<a href="#" class="contact-us-link">Contact Us</a></p>
+        <a href="#" class="privacy-policy-link">Privacy policy</a>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

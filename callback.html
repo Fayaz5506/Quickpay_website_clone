@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback - Quickpay Technical Documentation</title>
+    <link rel="stylesheet" href="tech-docs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://quickpay.net/images/unzer/logo-red.png" alt="Quickpay Logo" class="logo">
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-section">
+                    <h3>Main</h3>
+                    <ul>
+                        <li><a href="introduction.html">Introduction</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="callback.html" class="active">Callback</a></li>
+                        <li><a href="payments.html">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Integration Methods</h3>
+                    <ul>
+                        <li><a href="quickpay-link.html">Quickpay Link</a></li>
+                        <li><a href="quickpay-form.html">Quickpay Form</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="subscriptions.html">Subscriptions</a></li>
+                        <li><a href="saved-cards.html">Saved Cards</a></li>
+                        <li><a href="payouts.html">Payouts</a></li>
+                    </ul>
+                </div>
+                <div class="menu-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="opensource.html">Opensource</a></li>
+                        <li><a href="quickpay-projects.html">Quickpay Projects</a></li>
+                        <li><a href="appendixes.html">Appendixes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Callback</h1>
+                <div class="header-actions">
+                    <button class="btn-primary">Sign up</button>
+                    <button class="btn-secondary">Log in</button>
+                </div>
+            </header>
+
+            <div class="content-section">
+                <h2>Callback System</h2>
+                <p>The callback system allows you to receive real-time notifications about payment status changes and other important events.</p>
+
+                <h3>How Callbacks Work</h3>
+                <p>When a payment status changes or an important event occurs, Quickpay will send a POST request to your callback URL with relevant information about the event.</p>
+
+                <h3>Setting Up Callbacks</h3>
+                <p>To set up callbacks, you need to:</p>
+                <ol>
+                    <li>Configure your callback URL in the Quickpay dashboard</li>
+                    <li>Implement an endpoint to receive and process callbacks</li>
+                    <li>Verify the callback signature for security</li>
+                </ol>
+
+                <h3>Callback Data Structure</h3>
+                <pre><code>{
+    "id": "payment_id",
+    "order_id": "your_order_id",
+    "accepted": true,
+    "test_mode": false,
+    "branding_id": null,
+    "variables": {},
+    "acquirer": "clearhaus",
+    "operations": [],
+    "metadata": {},
+    "created_at": "2024-03-20T12:00:00Z",
+    "updated_at": "2024-03-20T12:00:00Z",
+    "retented_at": null,
+    "status": {
+        "code": "20000",
+        "message": "Approved"
+    }
+}</code></pre>
+
+                <h3>Security Considerations</h3>
+                <ul>
+                    <li>Always verify the callback signature</li>
+                    <li>Use HTTPS for your callback endpoint</li>
+                    <li>Implement proper error handling</li>
+                    <li>Store callback logs for debugging</li>
+                </ul>
+
+                <h3>Best Practices</h3>
+                <ul>
+                    <li>Respond quickly to callbacks (within 5 seconds)</li>
+                    <li>Implement idempotency to handle duplicate callbacks</li>
+                    <li>Monitor callback failures</li>
+                    <li>Keep your callback URL up to date</li>
+                </ul>
+
+                <h3>Testing Callbacks</h3>
+                <p>You can test your callback implementation using our test environment. Test callbacks will be marked with <code>test_mode: true</code>.</p>
+            </div>
+        </main>
+    </div>
+    <script src="tech-docs.js"></script>
+</body>
+</html> 
